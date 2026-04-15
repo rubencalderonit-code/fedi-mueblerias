@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FEDI Mueblerías</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 <body>
 
 <header class="header">
@@ -13,26 +5,32 @@
     <img src="img/logo.png" class="logo">
     <div>
       <h1>FEDI Mueblerías</h1>
-      <span>Saltillo</span>
+      <span>Catálogo en línea · Saltillo</span>
     </div>
   </div>
 
   <a href="https://wa.me/528443435820" target="_blank" class="header-btn">
-    WhatsApp
+    💬 WhatsApp
   </a>
 </header>
 
-<section class="hero">
-  <h2>Muebles para tu hogar</h2>
-  <p>Salas, recámaras, comedores, colchones y más</p>
+<!-- HERO TIPO TIENDA -->
+<section class="hero-banner">
+  <div class="hero-content">
+    <h2>Muebles para transformar tu hogar</h2>
+    <p>Salas, recámaras, comedores y más</p>
+    <a href="https://wa.me/528443435820" target="_blank">Cotizar ahora</a>
+  </div>
 </section>
 
+<!-- BENEFICIOS -->
 <section class="benefits">
-  <div>🚚 Entrega en Saltillo</div>
-  <div>💬 Atención rápida por WhatsApp</div>
-  <div>🏠 Todo para tu hogar</div>
+  <div>🚚 Entrega en Saltillo, Arteaga y Ramos Arizpe</div>
+  <div>💳 Facilidades de pago, credito y contado</div>
+  <div>💬 Atención rápida</div>
 </section>
 
+<!-- CATEGORIAS -->
 <section class="categorias">
   <button onclick="filtrar('todos')">Todos</button>
   <button onclick="filtrar('salas')">Salas</button>
@@ -41,17 +39,40 @@
   <button onclick="filtrar('colchones')">Colchones</button>
 </section>
 
+<!-- BUSCADOR -->
 <div class="buscador">
   <input type="text" id="busqueda" placeholder="Buscar muebles..." onkeyup="buscar()">
 </div>
-<h3 style="text-align:center;">Productos disponibles</h3>
 
+<!-- TITULO -->
+<h2 class="titulo-seccion">Productos disponibles</h2>
+
+<!-- PRODUCTOS -->
 <section id="productos" class="productos"></section>
 
+<!-- WHATSAPP FLOAT -->
 <a class="floating" href="https://wa.me/528443435820" target="_blank">
   💬
 </a>
+<!-- MAPA -->
+<section class="mapa">
+  <h2>Ubicación</h2>
+  <p>Perif. Luis Echeverría 1591, Valle de Lourdes, Saltillo</p>
 
+  <iframe 
+    src="https://www.google.com/maps?q=Perif.+Luis+Echeverría+1591,+Saltillo&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+<a href="https://www.google.com/maps?q=Perif.+Luis+Echeverría+1591,+Saltillo" target="_blank">
+  Ver en Google Maps
+</a>
+
+<!-- FOOTER -->
 <footer>
   <p>📍 Saltillo, Coahuila</p>
   <p>📞 844 343 5820</p>
@@ -60,4 +81,3 @@
 
 <script src="script.js"></script>
 </body>
-</html>
