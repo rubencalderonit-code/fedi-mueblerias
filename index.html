@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEDI Mueblerías</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <img src="img/logo.png" class="logo">
+    <div>
+      <h1>FEDI Mueblerías</h1>
+      <span>Saltillo</span>
+    </div>
+  </div>
+
+  <a href="https://wa.me/528443435820" target="_blank" class="header-btn">
+    WhatsApp
+  </a>
+</header>
+
+<section class="hero">
+  <h2>Muebles para tu hogar</h2>
+  <p>Salas, recámaras, comedores, colchones y más</p>
+</section>
+
+<section class="benefits">
+  <div>🚚 Entrega en Saltillo</div>
+  <div>💬 Atención rápida por WhatsApp</div>
+  <div>🏠 Todo para tu hogar</div>
+</section>
+
+<section class="categorias">
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('salas')">Salas</button>
+  <button onclick="filtrar('recamaras')">Recámaras</button>
+  <button onclick="filtrar('comedores')">Comedores</button>
+  <button onclick="filtrar('colchones')">Colchones</button>
+</section>
+
+<div class="buscador">
+  <input type="text" id="busqueda" placeholder="Buscar muebles..." onkeyup="buscar()">
+</div>
+<h3 style="text-align:center;">Productos disponibles</h3>
+
+<section id="productos" class="productos"></section>
+
+<a class="floating" href="https://wa.me/528443435820" target="_blank">
+  💬
+</a>
+
+<footer>
+  <p>📍 Saltillo, Coahuila</p>
+  <p>📞 844 343 5820</p>
+  <p>📘 <a href="https://facebook.com/TU_LINK_AQUI" target="_blank">Ver Facebook</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
