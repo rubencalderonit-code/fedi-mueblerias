@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1877F2;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.header span {
+  font-size: 12px;
+}
+
+.header-btn {
+  background: #25D366;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.hero p {
+  color: #555;
+}
+
+/* BENEFICIOS */
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* CATEGORIAS */
+.categorias {
+  text-align: center;
+  margin: 15px;
+}
+
+.categorias button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background: #1877F2;
+  color: white;
+  border-radius: 5px;
+}
+
+/* FILTROS */
+.filtros {
+  text-align: center;
+  margin: 10px;
+}
+
+/* BUSCADOR */
+.buscador {
+  text-align: center;
+  margin: 10px;
+}
+
+.buscador input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCTOS */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+/* INFO */
+.card-info {
+  padding: 10px;
+}
+
+.card-info h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* PRECIO */
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1877F2;
+  margin-top: 5px;
+}
+
+/* BOTON */
+.card-info a {
+  display: block;
+  margin-top: 10px;
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* TAG */
+.tag {
+  background: #1877F2;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* FLOATING */
+.floating {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: #1877F2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+}
