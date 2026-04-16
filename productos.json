@@ -3,30 +3,30 @@
     "nombre": "Sala Moderna Negra L",
     "precio": "$12,000",
     "categoria": "salas",
-    "imagen": "img/productos/sala1.png"
+    "imagen": "img/productos/sala1.webp"
   },
   {
     "nombre": "Recámara Moderna",
     "precio": "$8,500",
     "categoria": "recamaras",
-    "imagen": "img/productos/recamara1.png"
+    "imagen": "img/productos/recamara1.webp"
   },
   {
     "nombre": "Recámara Roble",
     "precio": "$10,500",
     "categoria": "recamaras",
-    "imagen": "img/productos/recamara2.png"
+    "imagen": "img/productos/recamara2.webp"
   },
   {
     "nombre": "Sala Moderna Gris",
     "precio": "$10,500",
     "categoria": "salas",
-    "imagen": "img/productos/sala2.png"
+    "imagen": "img/productos/sala2.webp"
   },
   {
     "nombre": "Sala Blanca",
     "precio": "$10,500",
     "categoria": "salas",
-    "imagen": "img/productos/sala3.png"
+    "imagen": "img/productos/sala3.webp"
   }
 ]

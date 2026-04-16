@@ -5,7 +5,8 @@ fetch('productos.json')
   .then(data => {
     productosData = data;
     mostrarProductos(data);
-  });
+  })
+  .catch(error => console.error("Error cargando productos:", error));
 
 function generarMensaje(producto) {
   return encodeURIComponent(
@@ -24,14 +25,14 @@ function mostrarProductos(lista) {
     card.classList.add('card');
 
     card.innerHTML = `
-      <img src="${p.imagen}" loading="lazy" alt="${p.nombre}">
+      <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
       <div class="card-info">
-        <span class="tag">Nuevo</span>
+        <span class="tag">Disponible</span>
         <h3>${p.nombre}</h3>
         <p class="precio">${p.precio}</p>
         <a href="https://wa.me/528443435820?text=${mensaje}" target="_blank">
-  Preguntar por WhatsApp
-</a>
+          Preguntar por WhatsApp
+        </a>
       </div>
     `;
 
@@ -57,4 +58,3 @@ function buscar() {
 
   mostrarProductos(filtrados);
 }
-<span class="tag">Disponible</span>

@@ -1,7 +1,14 @@
-body {
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f5f6f8;
+  background: #f1f5f9;
   color: #222;
 }
 
@@ -29,8 +36,8 @@ body {
 }
 
 .header h1 {
-  font-size: 16px;
-  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .header span {
@@ -46,22 +53,47 @@ body {
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
+  transition: 0.2s;
+}
+
+.header-btn:hover {
+  opacity: 0.85;
 }
 
 /* HERO */
-.hero {
+.hero-banner {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 30px 15px 10px;
+  color: white;
 }
 
-.hero h2 {
-  margin: 0;
-  font-size: 22px;
+.hero-content h2 {
+  font-size: 28px;
 }
 
-.hero p {
-  color: #666;
-  margin-top: 5px;
+.hero-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.hero-content a {
+  background: #1877F2;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.hero-content a:hover {
+  opacity: 0.85;
 }
 
 /* BENEFICIOS */
@@ -74,6 +106,8 @@ body {
   font-size: 13px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 /* CATEGORIAS */
@@ -91,6 +125,11 @@ body {
   border-radius: 20px;
   font-size: 12px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.categorias button:hover {
+  opacity: 0.85;
 }
 
 /* BUSCADOR */
@@ -108,12 +147,22 @@ body {
   outline: none;
 }
 
-/* PRODUCTOS */
+/* TITULO */
+.titulo-seccion {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* PRODUCTOS GRID */
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
   padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* RESPONSIVE */
@@ -134,8 +183,8 @@ body {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  transition: 0.25s ease;
   border: 1px solid #eee;
+  transition: 0.25s ease;
 }
 
 .card:hover {
@@ -146,10 +195,9 @@ body {
 /* IMG */
 .card img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  background: #fafafa;
-  padding: 10px;
+  height: 220px;
+  object-fit: cover;
+  background: #f3f3f3;
 }
 
 /* INFO */
@@ -159,7 +207,7 @@ body {
 
 .card-info h3 {
   font-size: 14px;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 /* PRECIO */
@@ -180,6 +228,11 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-size: 13px;
+  transition: 0.2s;
+}
+
+.card-info a:hover {
+  opacity: 0.85;
 }
 
 /* TAG */
@@ -191,7 +244,7 @@ body {
   border-radius: 4px;
 }
 
-/* FLOATING */
+/* WHATSAPP FLOAT */
 .floating {
   position: fixed;
   bottom: 15px;
@@ -201,56 +254,13 @@ body {
   padding: 15px;
   border-radius: 50%;
   text-decoration: none;
+  font-size: 20px;
 }
 
-/* FOOTER */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 13px;
-}
-.hero-banner {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('img/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-content h2 {
-  font-size: 26px;
-  margin: 0;
-}
-
-.hero-content p {
-  margin: 10px 0;
-}
-
-.hero-content a {
-  background: #1877F2;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
-.titulo-seccion {
-  text-align: center;
-  margin-top: 20px;
-}
-.productos {
-  max-width: 1200px;
-  margin: auto;
-}
+/* MAPA */
 .mapa {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   background: white;
   margin-top: 20px;
 }
@@ -262,33 +272,10 @@ footer {
 .mapa p {
   color: #555;
   font-size: 14px;
-}
-body {
-  background: #f1f5f9;
+  margin-bottom: 10px;
 }
 
-/* mejora header */
-.header h1 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* mejora botones */
-.header-btn:hover,
-.card-info a:hover {
-  opacity: 0.85;
-}
-
-/* mejora cards */
-.card {
-  transition: all 0.2s ease;
-}
-
-/* mejora titulo */
-.titulo-seccion {
-  font-size: 22px;
-  font-weight: 600;
-}
+/* BOTON MAPA */
 .btn-mapa {
   display: inline-block;
   margin-top: 15px;
@@ -298,4 +285,18 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn-mapa:hover {
+  opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
 }
