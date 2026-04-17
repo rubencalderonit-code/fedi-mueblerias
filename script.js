@@ -15,7 +15,6 @@ function generarMensaje(producto) {
 `Hola, me interesa este producto:
 
 🛋️ ${producto.nombre}
-💲 ${producto.precio}
 
 ¿Me puedes dar más información?`
   );

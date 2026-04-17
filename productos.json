@@ -16,25 +16,25 @@
     "imagen": "img/productos/recamara1.webp"
   },
   {
-    "id": "closet1",
-    "nombre": "Closet Moderno",
-    "precio": "$9,500",
-    "categoria": "recamaras",
-    "tag": "Top venta",
-    "colores": [
-      {
-        "nombre": "Chocolate",
-        "imagen": "img/productos/closet1-chocolate.webp"
-      },
-      {
-        "nombre": "Roble",
-        "imagen": "img/productos/closet1-roble.webp"
-      }
-    ],
-    "descripcion": "Closet amplio con excelente distribución",
-    "material": "MDF",
-    "medidas": "180x200x60 cm"
-  },
+  "id": "closet1",
+  "nombre": "Closet Moderno",
+  "precio": "$9,500",
+  "categoria": "closets",
+  "tag": "Top venta",
+  "colores": [
+    {
+      "nombre": "Chocolate",
+      "imagen": "img/productos/closet1-chocolate.webp"
+    },
+    {
+      "nombre": "Roble",
+      "imagen": "img/productos/closet1-roble.webp"
+    }
+  ],
+  "descripcion": "Closet amplio con excelente distribución",
+  "material": "MDF",
+  "medidas": "180x200x60 cm"
+},
   {
   "id": "sala2",
   "nombre": "Sala Moderna Gris",
