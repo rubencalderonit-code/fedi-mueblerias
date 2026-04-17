@@ -3,9 +3,12 @@ let productosData = [];
 fetch('productos.json')
   .then(res => res.json())
   .then(data => {
+    console.log("Productos cargados:", data);
+
     productosData = ordenarProductos(data);
     mostrarProductos(productosData);
-  });
+  })
+  .catch(error => console.error("Error cargando productos:", error));
 
 function generarMensaje(producto) {
   return encodeURIComponent(
@@ -24,7 +27,15 @@ function mostrarProductos(lista) {
 
   lista.forEach(p => {
 
-    const imagen = p.imagen || (p.colores ? p.colores[0].imagen : '');
+    let imagen = '';
+
+    if (p.imagen) {
+      imagen = p.imagen;
+    } else if (p.colores && p.colores.length > 0) {
+      imagen = p.colores[0].imagen;
+    } else {
+      imagen = 'img/productos/default.webp'; // respaldo
+    }
 
     const card = document.createElement('div');
     card.classList.add('card');
@@ -35,12 +46,16 @@ function mostrarProductos(lista) {
         <span class="tag">${p.tag || 'Disponible'}</span>
         <h3>${p.nombre}</h3>
         <p class="precio">${p.precio}</p>
-        <a href="detalle.html?id=${p.id}">
-          Ver detalles
-        </a>
-        <a href="https://wa.me/528443435820?text=${generarMensaje(p)}" target="_blank">
-          WhatsApp
-        </a>
+
+        <div class="botones-card">
+          <a href="detalle.html?id=${p.id}" class="btn-detalle">
+            Ver detalles
+          </a>
+
+          <a href="https://wa.me/528443435820?text=${generarMensaje(p)}" target="_blank" class="btn-wsp">
+            WhatsApp
+          </a>
+        </div>
       </div>
     `;
 
@@ -79,17 +94,3 @@ function ordenarProductos(lista) {
     return (prioridad[a.tag] || 5) - (prioridad[b.tag] || 5);
   });
 }
-
-/* MODAL */
-const modal = document.getElementById("modal");
-const imgModal = document.getElementById("imgModal");
-
-document.addEventListener("click", function(e) {
-  if (e.target.tagName === "IMG" && e.target.closest(".card")) {
-    modal.style.display = "block";
-    imgModal.src = e.target.src;
-  }
-});
-
-document.querySelector(".cerrar").onclick = () => modal.style.display = "none";
-modal.onclick = () => modal.style.display = "none";

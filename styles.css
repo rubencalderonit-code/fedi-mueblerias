@@ -342,3 +342,30 @@ footer {
   font-size: 30px;
   cursor: pointer;
 }
+.botones-card {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-detalle {
+  flex: 1;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.btn-wsp {
+  flex: 1;
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
