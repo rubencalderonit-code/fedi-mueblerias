@@ -8,20 +8,36 @@
 
 <body>
 
-<div class="detalle-container">
-  <img id="imagenProducto" class="detalle-img">
+<a href="index.html" class="volver">← Volver</a>
 
-  <div>
-    <h2 id="nombre"></h2>
-    <p id="precio"></p>
-    <p id="descripcion"></p>
+<div class="detalle-container">
+
+  <!-- IMAGEN -->
+  <div class="detalle-img-container">
+    <img id="imagenProducto" class="detalle-img">
+  </div>
+
+  <!-- INFO -->
+  <div class="detalle-info">
+    <h1 id="nombre"></h1>
+
+    <p class="detalle-precio" id="precio"></p>
+
+    <p class="detalle-extra">💳 Disponible a crédito y contado</p>
+
+    <div id="coloresContainer" class="colores-container">
+      <p>Colores disponibles:</p>
+      <div id="colores" class="colores"></div>
+    </div>
+
     <p><b>Material:</b> <span id="material"></span></p>
     <p><b>Medidas:</b> <span id="medidas"></span></p>
 
-    <div id="colores"></div>
-
-    <a id="btnWhats" target="_blank" class="btn-mapa">Comprar por WhatsApp</a>
+    <a id="btnWhats" target="_blank" class="btn-comprar">
+      Comprar por WhatsApp
+    </a>
   </div>
+
 </div>
 
 <script src="detalle.js"></script>

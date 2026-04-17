@@ -34,7 +34,31 @@
     "descripcion": "Closet amplio con excelente distribución",
     "material": "MDF",
     "medidas": "180x200x60 cm"
-  }
+  },
+  {
+  "id": "sala2",
+  "nombre": "Sala Moderna Gris",
+  "precio": "$10,500",
+  "categoria": "salas",
+  "tag": "Disponible",
+  "imagen": "img/productos/sala2.webp"
+},
+{
+  "id": "sala3",
+  "nombre": "Sala Blanca",
+  "precio": "$10,500",
+  "categoria": "salas",
+  "tag": "Disponible",
+  "imagen": "img/productos/sala3.webp"
+},
+{
+  "id": "recamara2",
+  "nombre": "Recámara Roble",
+  "precio": "$10,500",
+  "categoria": "recamaras",
+  "tag": "Disponible",
+  "imagen": "img/productos/recamara2.webp"
+}
 ]
 
 
