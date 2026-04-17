@@ -63,16 +63,29 @@ body {
 /* HERO */
 .hero-banner {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('img/banner.jpg');
+              url('img/banner..jpg.jpeg');
   background-size: cover;
   background-position: center;
-  height: 320px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
 }
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
 
 .hero-content h2 {
   font-size: 28px;
