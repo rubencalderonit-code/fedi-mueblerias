@@ -4,61 +4,71 @@
     "nombre": "Sala Moderna Negra L",
     "precio": "$12,000",
     "categoria": "salas",
-    "tag": "OFERTA",
-    "imagen": "img/productos/sala1.webp"
+    "imagen": "img/productos/sala1.webp",
+    "descripcion": "Sala moderna en L, ideal para espacios amplios",
+    "material": "Tela premium",
+    "medidas": "280 x 180 cm"
+  },
+  {
+    "id": "sala2",
+    "nombre": "Sala Moderna Gris",
+    "precio": "$10,500",
+    "categoria": "salas",
+    "imagen": "img/productos/sala2.webp",
+    "descripcion": "Sala moderna color gris",
+    "material": "Tela",
+    "medidas": "240 cm"
+  },
+  {
+    "id": "sala3",
+    "nombre": "Sala Blanca",
+    "precio": "$10,500",
+    "categoria": "salas",
+    "imagen": "img/productos/sala3.webp",
+    "descripcion": "Sala elegante color blanco",
+    "material": "Tela",
+    "medidas": "240 cm"
   },
   {
     "id": "recamara1",
     "nombre": "Recámara Moderna",
     "precio": "$8,500",
     "categoria": "recamaras",
-    "tag": "Disponible",
-    "imagen": "img/productos/recamara1.webp"
+    "imagen": "img/productos/recamara1.webp",
+    "descripcion": "Recámara minimalista",
+    "material": "Madera",
+    "medidas": "Matrimonial"
   },
   {
-  "id": "closet1",
-  "nombre": "Closet Moderno",
-  "precio": "$9,500",
-  "categoria": "closets",
-  "tag": "Top venta",
-  "colores": [
-    {
-      "nombre": "Chocolate",
-      "imagen": "img/productos/closet1-chocolate.webp"
-    },
-    {
-      "nombre": "Roble",
-      "imagen": "img/productos/closet1-roble.webp"
-    }
-  ],
-  "descripcion": "Closet amplio con excelente distribución",
-  "material": "MDF",
-  "medidas": "180x200x60 cm"
-},
+    "id": "recamara2",
+    "nombre": "Recámara Roble",
+    "precio": "$10,500",
+    "categoria": "recamaras",
+    "imagen": "img/productos/recamara2.webp",
+    "descripcion": "Recámara acabado roble",
+    "material": "Madera",
+    "medidas": "Queen size"
+  },
   {
-  "id": "sala2",
-  "nombre": "Sala Moderna Gris",
-  "precio": "$10,500",
-  "categoria": "salas",
-  "tag": "Disponible",
-  "imagen": "img/productos/sala2.webp"
-},
-{
-  "id": "sala3",
-  "nombre": "Sala Blanca",
-  "precio": "$10,500",
-  "categoria": "salas",
-  "tag": "Disponible",
-  "imagen": "img/productos/sala3.webp"
-},
-{
-  "id": "recamara2",
-  "nombre": "Recámara Roble",
-  "precio": "$10,500",
-  "categoria": "recamaras",
-  "tag": "Disponible",
-  "imagen": "img/productos/recamara2.webp"
-}
+    "id": "closet1",
+    "nombre": "Closet Moderno",
+    "precio": "$9,500",
+    "categoria": "recamaras",
+    "imagen": "img/productos/closet1-chocolate.webp",
+    "descripcion": "Closet amplio con excelente distribución",
+    "material": "Madera",
+    "medidas": "180x200x60 cm",
+    "colores": [
+      {
+        "nombre": "Chocolate",
+        "codigo": "#3b2a1f",
+        "imagen": "img/productos/closet1-chocolate.webp"
+      },
+      {
+        "nombre": "Roble",
+        "codigo": "#a67c52",
+        "imagen": "img/productos/closet1-roble.webp"
+      }
+    ]
+  }
 ]
-
-

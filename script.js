@@ -1,5 +1,8 @@
 let productosData = [];
 
+/* =========================
+   CARGA DE PRODUCTOS
+========================= */
 fetch('productos.json')
   .then(res => res.json())
   .then(data => {
@@ -8,32 +11,41 @@ fetch('productos.json')
     productosData = ordenarProductos(data);
     mostrarProductos(productosData);
   })
-  .catch(error => console.error("Error cargando productos:", error));
+  .catch(error => {
+    console.error("Error cargando productos:", error);
+  });
 
+
+/* =========================
+   MENSAJE WHATSAPP
+========================= */
 function generarMensaje(producto) {
   return encodeURIComponent(
 `Hola, me interesa este producto:
 
 🛋️ ${producto.nombre}
+💲 ${producto.precio}
 
 ¿Me puedes dar más información?`
   );
 }
 
+
+/* =========================
+   RENDER DE PRODUCTOS
+========================= */
 function mostrarProductos(lista) {
   const contenedor = document.getElementById('productos');
   contenedor.innerHTML = '';
 
   lista.forEach(p => {
 
-    let imagen = '';
+    let imagen = 'img/productos/default.webp';
 
     if (p.imagen) {
       imagen = p.imagen;
     } else if (p.colores && p.colores.length > 0) {
       imagen = p.colores[0].imagen;
-    } else {
-      imagen = 'img/productos/default.webp'; // respaldo
     }
 
     const card = document.createElement('div');
@@ -41,6 +53,7 @@ function mostrarProductos(lista) {
 
     card.innerHTML = `
       <img src="${imagen}" alt="${p.nombre}" loading="lazy">
+
       <div class="card-info">
         <span class="tag">${p.tag || 'Disponible'}</span>
         <h3>${p.nombre}</h3>
@@ -51,7 +64,9 @@ function mostrarProductos(lista) {
             Ver detalles
           </a>
 
-          <a href="https://wa.me/528443435820?text=${generarMensaje(p)}" target="_blank" class="btn-wsp">
+          <a href="https://wa.me/528443435820?text=${generarMensaje(p)}"
+             target="_blank"
+             class="btn-wsp">
             WhatsApp
           </a>
         </div>
@@ -62,17 +77,29 @@ function mostrarProductos(lista) {
   });
 }
 
+
+/* =========================
+   FILTROS
+========================= */
 function filtrar(cat) {
   if (cat === 'todos') {
     mostrarProductos(productosData);
-  } else {
-    const filtrados = productosData.filter(p => p.categoria === cat);
-    mostrarProductos(filtrados);
+    return;
   }
+
+  const filtrados = productosData.filter(p => p.categoria === cat);
+  mostrarProductos(filtrados);
 }
 
+
+/* =========================
+   BUSCADOR
+========================= */
 function buscar() {
-  const texto = document.getElementById('busqueda').value.toLowerCase();
+  const texto = document
+    .getElementById('busqueda')
+    .value
+    .toLowerCase();
 
   const filtrados = productosData.filter(p =>
     p.nombre.toLowerCase().includes(texto)
@@ -81,6 +108,10 @@ function buscar() {
   mostrarProductos(filtrados);
 }
 
+
+/* =========================
+   ORDENAMIENTO POR TAG
+========================= */
 function ordenarProductos(lista) {
   const prioridad = {
     "OFERTA": 1,
