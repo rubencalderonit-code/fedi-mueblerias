@@ -3,14 +3,18 @@ let productosData = [];
 fetch('productos.json')
   .then(res => res.json())
   .then(data => {
-    productosData = data;
-    mostrarProductos(data);
-  })
-  .catch(error => console.error("Error cargando productos:", error));
+    productosData = ordenarProductos(data);
+    mostrarProductos(productosData);
+  });
 
 function generarMensaje(producto) {
   return encodeURIComponent(
-    `Hola, me interesa este producto:\n${producto.nombre}\n${producto.precio}`
+`Hola, me interesa este producto:
+
+🛋️ ${producto.nombre}
+💲 ${producto.precio}
+
+¿Me puedes dar más información?`
   );
 }
 
@@ -19,19 +23,23 @@ function mostrarProductos(lista) {
   contenedor.innerHTML = '';
 
   lista.forEach(p => {
-    const mensaje = generarMensaje(p);
+
+    const imagen = p.imagen || (p.colores ? p.colores[0].imagen : '');
 
     const card = document.createElement('div');
     card.classList.add('card');
 
     card.innerHTML = `
-      <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
+      <img src="${imagen}" alt="${p.nombre}" loading="lazy">
       <div class="card-info">
-        <span class="tag">Disponible</span>
+        <span class="tag">${p.tag || 'Disponible'}</span>
         <h3>${p.nombre}</h3>
         <p class="precio">${p.precio}</p>
-        <a href="https://wa.me/528443435820?text=${mensaje}" target="_blank">
-          Preguntar por WhatsApp
+        <a href="detalle.html?id=${p.id}">
+          Ver detalles
+        </a>
+        <a href="https://wa.me/528443435820?text=${generarMensaje(p)}" target="_blank">
+          WhatsApp
         </a>
       </div>
     `;
@@ -58,3 +66,30 @@ function buscar() {
 
   mostrarProductos(filtrados);
 }
+
+function ordenarProductos(lista) {
+  const prioridad = {
+    "OFERTA": 1,
+    "Top venta": 2,
+    "Nuevo": 3,
+    "Disponible": 4
+  };
+
+  return lista.sort((a, b) => {
+    return (prioridad[a.tag] || 5) - (prioridad[b.tag] || 5);
+  });
+}
+
+/* MODAL */
+const modal = document.getElementById("modal");
+const imgModal = document.getElementById("imgModal");
+
+document.addEventListener("click", function(e) {
+  if (e.target.tagName === "IMG" && e.target.closest(".card")) {
+    modal.style.display = "block";
+    imgModal.src = e.target.src;
+  }
+});
+
+document.querySelector(".cerrar").onclick = () => modal.style.display = "none";
+modal.onclick = () => modal.style.display = "none";
