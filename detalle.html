@@ -6,59 +6,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+<body>
+
 <header class="header">
   <div class="header-left">
     <img src="img/logo.png" class="logo">
-    <div>
-      <h1>FEDI Mueblerías</h1>
-      <span>· Catálogo en línea ·</span>
-    </div>
+    <h2>FEDI Mueblerías</h2>
   </div>
-
-  <a href="index.html" class="header-btn" style="background:#555;">
-    Inicio
-  </a>
-
-  <a href="https://wa.me/528443435820" target="_blank" class="header-btn">
-    💬 WhatsApp
-  </a>
 </header>
 
-<body>
-
-<a href="index.html" class="volver">← Volver</a>
-
-<div class="detalle-container">
-
-  <!-- IMAGEN -->
-  <div class="detalle-img-container">
-    <img id="imagenProducto" class="detalle-img">
-  </div>
-
-  <!-- INFO -->
-  <div class="detalle-info">
-    <h1 id="nombre"></h1>
-
-    <p class="detalle-precio" id="precio"></p>
-
-    <p class="detalle-extra">💳 Disponible a crédito y contado</p>
-
-    <div id="coloresContainer" class="colores-container">
-      <p>Colores disponibles:</p>
-      <div id="colores" class="colores"></div>
-    </div>
-
-    <p><b>Material:</b> <span id="material"></span></p>
-    <p><b>Medidas:</b> <span id="medidas"></span></p>
-
-    <a id="btnWhats" target="_blank" class="btn-comprar">
-      Comprar por WhatsApp
-    </a>
-  </div>
-
-</div>
+<div id="detalle" class="detalle-container"></div>
 
 <script src="detalle.js"></script>
+
+const relacionados = data.filter(x =>
+  x.categoria === p.categoria && x.id !== p.id
+).slice(0,3);
 
 </body>
 </html>

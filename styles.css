@@ -1,7 +1,9 @@
 :root {
   --primary: #1877F2;
   --whatsapp: #25D366;
-  --bg: #f1f5f9;
+  --dark: #111;
+  --gray: #666;
+  --bg: #f5f7fa;
 }
 
 /* RESET */
@@ -12,8 +14,9 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: var(--bg);
+  color: var(--dark);
 }
 
 /* HEADER */
@@ -21,9 +24,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 25px;
   background: white;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
 .header-left {
@@ -36,10 +39,28 @@ body {
   width: 40px;
 }
 
+.header h1 {
+  font-size: 18px;
+}
+
+.header span {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.header-btn {
+  background: var(--whatsapp);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
 /* HERO */
 .hero-banner {
-  height: 400px;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  height: 420px;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
               url('img/banner.webp');
   background-size: cover;
   background-position: center;
@@ -51,105 +72,209 @@ body {
 }
 
 .hero-content h2 {
-  font-size: 32px;
+  font-size: 34px;
+  font-weight: 600;
 }
 
 .hero-content p {
   margin: 10px 0;
+  font-size: 18px;
 }
 
 .hero-content a {
+  display: inline-block;
+  margin-top: 10px;
   background: var(--primary);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 22px;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 /* BENEFITS */
 .benefits {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   background: white;
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
 }
 
 /* CATEGORIAS */
 .categorias {
   text-align: center;
-  margin: 15px;
+  margin: 20px;
 }
 
 .categorias button {
   margin: 5px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border: none;
-  background: var(--primary);
-  color: white;
+  background: #e4e7eb;
+  color: #333;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.categorias button:hover {
+  background: var(--primary);
+  color: white;
 }
 
 /* BUSCADOR */
 .buscador {
   text-align: center;
-  margin: 15px;
 }
 
 .buscador input {
   width: 90%;
   max-width: 400px;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 25px;
   border: 1px solid #ddd;
+}
+
+/* TITULO */
+.titulo-seccion {
+  text-align: center;
+  margin: 25px 0 10px;
+  font-size: 22px;
 }
 
 /* PRODUCTOS */
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 20px;
+  gap: 22px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .card {
   background: white;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  object-position: center;
 }
 
+
 .card-info {
-  padding: 10px;
+  padding: 14px;
+}
+
+.tag {
+  font-size: 11px;
+  background: black;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.card-info h3 {
+  margin: 8px 0;
+  font-size: 15px;
 }
 
 .precio {
   font-weight: bold;
+  font-size: 18px;
 }
 
-.card-info a {
-  display: block;
-  margin-top: 8px;
+/* BOTONES */
+.botones-card {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-detalle {
+  flex: 1;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-wsp {
+  flex: 1;
   background: var(--whatsapp);
   color: white;
   text-align: center;
   padding: 8px;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
 }
 
-/* FLOATING */
+/* DETALLE */
+.detalle-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.detalle-img img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.detalle-info h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.color-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 6px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.extra {
+  margin: 10px 0;
+  color: var(--gray);
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--gray);
+  text-decoration: none;
+}
+
+/* FLOAT */
 .floating {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   background: var(--whatsapp);
   color: white;
   padding: 15px;
@@ -157,20 +282,111 @@ body {
   text-decoration: none;
 }
 
-/* FOOTER */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 15px;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detalle-container {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* DETALLE */
+@media (max-width: 500px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+/* DETALLE PRO */
 .detalle-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px;
+  gap: 60px;
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.detalle-img img {
+  width: 100%;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.detalle-img img:hover {
+  transform: scale(1.02);
+}
+
+/* INFO */
+.detalle-info h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.colores {
+  margin: 10px 0;
+}
+
+/* COLORES PRO */
+.color-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.color-circle.active {
+  border: 2px solid black;
+}
+
+/* BOTON */
+.btn-wsp {
+  display: block;
+  margin-top: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* VOLVER */
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+/* RESPONSIVE DETALLE */
+@media (max-width: 900px) {
+  .detalle-container {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+}
+img[src*="closet"] {
+  object-position: center;
+}
+/* ===== DETALLE PRO ===== */
+
+.detalle-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
   max-width: 1100px;
   margin: auto;
 }
@@ -178,6 +394,7 @@ footer {
 .detalle-img img {
   width: 100%;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .detalle-info h1 {
@@ -185,12 +402,17 @@ footer {
   margin-bottom: 10px;
 }
 
+.label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
 .color-circle {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: inline-block;
-  margin: 5px;
+  margin: 6px;
   cursor: pointer;
   border: 2px solid #ddd;
 }
@@ -206,18 +428,19 @@ footer {
 
 .btn-wsp {
   display: block;
-  margin-top: 15px;
-  background: var(--whatsapp);
+  margin-top: 20px;
+  background: #25D366;
   color: white;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .volver {
   display: inline-block;
-  margin-top: 15px;
-  color: #555;
+  margin-top: 20px;
+  color: #777;
   text-decoration: none;
 }

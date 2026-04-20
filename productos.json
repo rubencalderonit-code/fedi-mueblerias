@@ -70,5 +70,75 @@
         "imagen": "img/productos/closet1-roble.webp"
       }
     ]
+  },
+  {
+    "id": "closet2",
+    "nombre": "Closet Sencillo",
+    "precio": "$8,500",
+    "categoria": "closets",
+    "imagen": "img/productos/closet2-roble.webp",
+    "descripcion": "Recamara minimalista",
+    "material": "Madera",
+    "medidas": "Closet individual",
+    "colores": [
+      {
+        "nombre": "Chocolate",
+        "codigo": "#3b2a1f",
+        "imagen": "img/productos/closet2-chocolate.webp"
+      },
+      {
+        "nombre": "Roble",
+        "codigo": "#a67c52",
+        "imagen": "img/productos/closet2-roble.webp"
+      }
+    ]
+  },
+  {
+    "id": "alacena1",
+    "nombre": "Alacena Moderna",
+    "precio": "$9,500",
+    "categoria": "alacenas",
+    "imagen": "img/productos/alacena1-chocolate.webp",
+    "descripcion": "alacena amplia con excelente distribución",
+    "material": "Madera",
+    "medidas": "180x200x60 cm",
+    "colores": [
+      {
+        "nombre": "Chocolate",
+        "codigo": "#3b2a1f",
+        "imagen": "img/productos/alacena1-chocolate.webp"
+      },
+      {
+        "nombre": "Roble",
+        "codigo": "#a67c52",
+        "imagen": "img/productos/alacena1-roble.webp"
+      }
+    ]
+  },
+  {
+    "id": "cajonera1",
+    "nombre": "Cajonera Moderna",
+    "precio": "$9,500",
+    "categoria": "cajoneras",
+    "imagen": "img/productos/cajonera1-chocolate.webp",
+    "descripcion": "Cajonera amplia",
+    "material": "Madera",
+    "medidas": "180x200x60 cm",
+    "colores": [
+      {
+        "nombre": "Gris",
+        "codigo": "#9b9b9b",
+        "imagen": "img/productos/cajonera1-gris.webp"
+      },
+      {
+        "nombre": "Roble",
+        "codigo": "#a67c52",
+        "imagen": "img/productos/cajonera1-roble.webp"
+      },{
+        "nombre": "Chocolate",
+        "codigo": "#3b2a1f",
+        "imagen": "img/productos/cajonera1-chocolate.webp"
+      }
+    ]
   }
 ]
